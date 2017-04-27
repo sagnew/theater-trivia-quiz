@@ -50,7 +50,7 @@ def quiz():
         print(message)
         response.message(message)
 
-        session['correct_answer'] = new_question['correct_answer']
+        session['correct_answer'] = new_question['correct_answer'].lower().strip()
         session['quiz_state'] = 'answering'
 
     return str(response)
